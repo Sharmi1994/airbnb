@@ -1,0 +1,84 @@
+h3{
+    font-size: 0.95rem;
+}
+
+.heading{
+    display:flex;
+ background-color: #dddddd;
+  
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.topop{
+   text-decoration: underline;
+   margin-left: 2px;
+}
+
+.popup{
+    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+       justify-content: center;
+    width: 800px;
+    height:500px;
+ 
+    
+}
+
+.img1{
+    position: absolute;
+    		    left: 0px;
+    		    right: 0px;
+    		    object-fit: cover;
+    		    object-position: center center;
+    		    vertical-align: bottom;
+    		    height: 100% !important;
+    	    width: 100% !important;
+}
+.img2{
+    width: 272px;
+    height: 23px;
+
+}
+
+.popup1{
+    position: relative !important;
+    flex: var(--mls-part-weight, 1) 0 0 !important;
+    max-width: var(--mls-part-max-width, none) !important;
+    min-height: var(--mls-part-min-height, auto) !important;
+    display: grid !important;
+    grid-template-columns: minmax(0px, 1fr) !important;
+    grid-template-rows: minmax(0px, 1fr) !important;
+   
+}
+
+.crossicon{
+    width: 32px;
+    height: 30px;
+    
+}
+.popupcontent{
+
+    text-align: center;
+}
+
+.popupprice{
+    font-size: 3.25rem;
+    font-weight: bold;
+}
+.later{
+    text-decoration: underline;
+}
+
+.roundicon{
+   
+    border-radius: 50%;
+
+    background-color: white;
+}
