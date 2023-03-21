@@ -57,6 +57,14 @@ h3{
     grid-template-rows: minmax(0px, 1fr) !important;
    
 }
+.img4{
+height:100px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+}
 
 .crossicon{
     width: 32px;
@@ -81,4 +89,82 @@ h3{
     border-radius: 50%;
 
     background-color: white;
+}
+.search{
+        display: flex;
+		    justify-content: space-evenly;	
+		    border: 1px solid grey;
+		    width: 500px;
+	    height: 50px;
+        border-radius: 40px;
+        padding-top: 10px;
+      
+}
+.search2{
+    display: flex;
+        justify-content: space-evenly;	
+        border: 1px solid grey;
+        width: 850px;
+        height: 80px;
+    border-radius: 40px;
+    padding-top: 10px;
+  
+}
+
+.search-icon{
+    display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  color: white;
+}
+.search-icon2{
+    display: flex;
+  justify-content: left;
+  align-items: center;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  color: white;
+}
+
+.login{
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+}
+
+hr{
+    margin:0px;
+}
+.box:hover{
+    background-color: #EEEEEE;
+    border-radius: 40px;
+
+}
+
+.userlogin{
+    border: 1px solid grey;
+    border-radius: 20px;
+    height: 30px;
+    width: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.details{
+    display:flex;
+    justify-content:space-around;
+    width:400px;
+}
+.inputdesign{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
 }
