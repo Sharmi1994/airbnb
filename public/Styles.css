@@ -187,3 +187,21 @@ hr{
     margin-top:50px;
 }
 
+.guestcontain{
+    width:400px;
+    
+}
+.guestcontain1{
+    display: flex;
+    justify-content: space-between;
+    height:75px;
+}
+.guestcontain2{
+margin-top: 15px;
+padding-inline: 10px;
+}
+.age{
+    color:grey;
+    font-size: 0.75rem;
+}
+

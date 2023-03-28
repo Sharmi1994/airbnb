@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 import { FaSearch } from "react-icons/fa";
 import { Calendar } from "primereact/calendar";
@@ -7,9 +7,18 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import SearctDest from "./SearchDest";
 import moment from 'moment';
+import { OverlayPanel } from "primereact/overlaypanel";
+
+import Addguest from "./addguest";
 function Detail() {
+    const op=useRef(null);
   const [date1, setDate1] = useState(null);
   const [date2, setDate2] = useState(null);
+
+  function handleGuest(value){
+console.log(value);
+
+  }
 
   function handleSearch(){
 if(moment(date2).isBefore(date1)){
@@ -62,7 +71,10 @@ else{
 
         <div>
           <div>Who</div>
-          <input className="inputdesign" type="text" placeholder="Add Guests" />
+          <input className="inputdesign" type="text" placeholder="Add Guests"  onClick={(e)=>{op.current.toggle(e)}}/>
+          <OverlayPanel ref={op}>
+        <Addguest onmemberAdd={handleGuest} />
+      </OverlayPanel>
         </div>
 
         <div className="search-icon2">
