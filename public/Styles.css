@@ -204,4 +204,32 @@ padding-inline: 10px;
     color:grey;
     font-size: 0.75rem;
 }
+ .filterimg{
+    width: 24px;
+    height: 24px;
+ }
+.filtername{
+    font-size:0.75rem;
+}
 
+
+
+.filter-carousel {
+    overflow: hidden;
+    position: relative;
+    justify-content: space-evenly;
+  }
+
+  .filter-carousel .p-carousel-prev, .filter-carousel .p-carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .filter-carousel .p-carousel-prev {
+    left: 0;
+  }
+
+  .filter-carousel .p-carousel-next {
+    right: 0;
+  }

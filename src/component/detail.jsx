@@ -6,27 +6,33 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import SearctDest from "./SearchDest";
-import moment from 'moment';
+import moment from "moment";
 import { OverlayPanel } from "primereact/overlaypanel";
 
 import Addguest from "./addguest";
 function Detail() {
-    const op=useRef(null);
+  const op = useRef(null);
   const [date1, setDate1] = useState(null);
   const [date2, setDate2] = useState(null);
 
-  function handleGuest(value){
-console.log(value);
 
+
+  const [guestValue, setGuestValue] = useState("");
+
+  function handleGuest(value) {
+  
+
+    setGuestValue(
+      `${value.Adultcount} adults, ${value.Childrencount} children, ${value.Infantcount} infants, ${value.Petcount} pets`
+    );
   }
 
-  function handleSearch(){
-if(moment(date2).isBefore(date1)){
-    alert("checkout date cannot be before checkin date");
-}
-else{
-    alert("search successful");
-}
+  function handleSearch() {
+    if (moment(date2).isBefore(date1)) {
+      alert("checkout date cannot be before checkin date");
+    } else {
+      alert("search successful");
+    }
   }
   return (
     <div>
@@ -37,7 +43,7 @@ else{
         <div>Online Experiences</div>
       </div>
       <br></br>
-    
+
       <div className="row search2">
         <div>
           <div> Where</div>
@@ -71,19 +77,26 @@ else{
 
         <div>
           <div>Who</div>
-          <input className="inputdesign" type="text" placeholder="Add Guests"  onClick={(e)=>{op.current.toggle(e)}}/>
+          <input
+            className="inputdesign"
+            type="text"
+            placeholder="Add Guests"
+            value={guestValue}
+            onClick={(e) => {
+              op.current.toggle(e);
+            }}
+          />
           <OverlayPanel ref={op}>
-        <Addguest onmemberAdd={handleGuest} />
-      </OverlayPanel>
+            <Addguest onmemberAdd={handleGuest} />
+          </OverlayPanel>
         </div>
 
-        <div className="search-icon2">
+        <div className="search-icon2" onClick={handleSearch}>
           Search
-          <FaSearch onClick={handleSearch}/>
+          <FaSearch />
         </div>
       </div>
     </div>
-    
   );
 }
 

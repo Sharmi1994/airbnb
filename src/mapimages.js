@@ -1,7 +1,7 @@
 const images = [
   {
     src: "https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg",
-    value: "",
+    value: "all over the world",
   },
   {
     src: "https://a0.muscache.com/im/pictures/c61d10f5-4ab3-4d16-bed7-0449e15c8277.jpg?im_w=320",
